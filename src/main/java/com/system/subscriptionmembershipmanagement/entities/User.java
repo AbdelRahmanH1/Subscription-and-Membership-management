@@ -1,5 +1,6 @@
 package com.system.subscriptionmembershipmanagement.entities;
 
+import com.system.subscriptionmembershipmanagement.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,8 +24,11 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "password")
+    private String password;
+
     @Column(name = "role")
-    private String role;
+    private UserRole role;
 
     @Column(name = "created_at", updatable = false, insertable = false)
     private LocalDateTime createdAt;
