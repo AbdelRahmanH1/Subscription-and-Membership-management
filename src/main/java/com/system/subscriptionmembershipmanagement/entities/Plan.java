@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 @Entity
@@ -25,11 +26,11 @@ public class Plan {
     private BigDecimal price;
 
     @Column(name = "duration_in_days")
-    private int duration_in_days;
+    private int duration;
 
     @Column(name = "description")
     private String description;
 
-    @Column(name = "created_at")
+    @Column(name = "created_at",insertable = false,updatable = false)
     private LocalDateTime created_at;
 }
