@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -33,4 +34,9 @@ public class Plan {
 
     @Column(name = "created_at",insertable = false,updatable = false)
     private LocalDateTime created_at;
+
+    public LocalDate calculateEndDate(LocalDate startDate) {
+        return startDate.plusDays(this.duration);
+    }
+
 }
