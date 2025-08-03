@@ -1,0 +1,1 @@
+ALTER TABLE payments MODIFY subscription_id BIGINT NULL;
