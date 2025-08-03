@@ -38,4 +38,5 @@ public class Plan {
     public LocalDate calculateEndDate(LocalDate startDate) {
         return startDate.plusDays(this.duration);
     }
+
 }
